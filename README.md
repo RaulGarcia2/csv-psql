@@ -3,10 +3,10 @@ Script en python que convierte una tabla csv en una tabla para una base de datos
 
 Se deberán copiar los ficheros *csv-psql.py* y *librería.py* en una carpeta incluida dentro de la variable $PATH del entorno del usuario como por ejemplo *$HOME/bin*.
 
-##Requisitos
+## Requisitos
 Este script está escrito en python version 3. Necesita tener instalada la librería *python3-pygresql*.
 
-##Funcionamiento
+## Funcionamiento
 
 A la hora de invocar el script se deberá indicar en qué base de datos se desea añadir la tabla.
 La tabla que nos crea, tendrá el mismo nombre que el del fichero que vamos a leer (sin la extensión csv). 
