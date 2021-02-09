@@ -79,8 +79,9 @@ for linea in f:
                 print(t)
                 t=base.creaTabla(tabla, campos)
                 print(t)
-            if args.k:
+            elif args.k:
                 print('Añadiendo datos')
+                t=''
             else:
                 print('tabla ' + tabla + ' ya existe')
                 quit()
