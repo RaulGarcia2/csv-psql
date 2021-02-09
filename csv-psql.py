@@ -13,6 +13,7 @@ parser.add_argument("-p", "--puerto", help="Puerto de postgresql (por defecto 54
 parser.add_argument("-u", "--user", help="Usuario de postgresql" )
 parser.add_argument("-c", "--password", help="Contraseña del usuario de postgresql" )
 parser.add_argument("-d", help="Se borra la tabla si esta existe", action="store_true" )
+parser.add_argument("-k", help="Añade registros a la tabla si esta existe", action="store_true" )
 
 args = parser.parse_args()
 
@@ -76,12 +77,14 @@ for linea in f:
             if args.d:
                 t=base.borraTabla(tabla)
                 print(t)
+                t=base.creaTabla(tabla, campos)
+                print(t)
+            if args.k:
+                print('Añadiendo datos')
             else:
                 print('tabla ' + tabla + ' ya existe')
                 quit()
 
-        t=base.creaTabla(tabla, campos)
-        print(t)
         if t[:5]=="Error":
             quit()
     else:
