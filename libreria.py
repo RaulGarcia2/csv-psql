@@ -74,6 +74,7 @@ class Base:
 
             if a=='':
                 a='Null'
+                tipo='integer'
             sql += case(tipo) + a + case(tipo) + ', ' 
             n += 1
         sql = sql[:len(sql)-2] + ');'

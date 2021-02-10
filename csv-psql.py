@@ -81,13 +81,16 @@ for linea in f:
                 print(t)
             elif args.k:
                 print('Añadiendo datos')
-                t=''
+                t='      '
             else:
                 print('tabla ' + tabla + ' ya existe')
                 quit()
 
-        if t[:5]=="Error":
-            quit()
+            if t[:5]=="Error":
+                quit()
+        else:
+            t=base.creaTabla(tabla, campos)
+            print(t)
     else:
         # Añadimos registros a la tabla
         valores=linea.split(",")       
